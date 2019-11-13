@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./assets/css/app.css">
+  <title>Domotica</title>
+</head>
+
+<body>
+  <h1>Domotica</h1>
+  <div id="account">
+    <div id="top">
+      <form class="gegevens" id="login" action="">
+        <h1>Log in</h1>
+        <input class="input" type="email" name="login_email" id="login_email" placeholder="email">
+        <input class="input" type="password" name="login_password" id="login_password" placeholder="wachtwoord">
+        <button type="submit" id="btn_login">Login</button>
+
+      </form>
+
+      <form class="gegevens" id="signup" action="">
+        <h1>Sign in</h1>
+        <input class="input" type="email" name="signup_email" id="signup_email" placeholder="email">
+        <input class="input" type="password" name="ignup_password" id="signup_password" placeholder="password">
+        <button type="submit" id="btn_signup">Sign up</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="dashboardContainer">
+    <div id="dashboard" class="dashboard">
+      <div class="group">
+        <div id="time" class="balk"></div>
+        <!-- <div id="day" class="day cube"></div> -->
+        <div id="temp" class="temp cube"></div>
+        <div class="humindity cube cubered">
+          <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="200" height="200">
+            <circle class="circle-chart__background" />
+            <circle id="hum" class="circle-chart__circle" stroke='white' stroke-width="2" stroke-dasharray="30,100"
+              stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+            <g class="circle-chart__info">
+              <text id="procent" class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central"
+                text-anchor="middle"></text>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="group" id="container"></div>
+
+
+    </div>
+    <div class="group">
+      <button id="run" class="cube">Start</button>
+      <button id="alarm" class="cube">Alarm</button>
+      <button id="btn_logout" class="cube">logout</button>
+    </div>
+  </div>
+
+
+
+
+  <audio id="audio" src="./assets/audio/radioactive-alarm.mp3"></audio>
+
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase.js"></script>
+  <script src="./assets/js/account.js"></script>
+  <script src="./assets//js/app.js"></script>
+
+</body>
+
+</html>
